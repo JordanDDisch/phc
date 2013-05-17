@@ -4,7 +4,7 @@
 <!--[if IE 8 ]><html class="ie ie8" <?php language_attributes();?>> <![endif]-->
 <!--[if IE 9 ]><html class="ie ie9" <?php language_attributes();?>> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html <?php language_attributes();?>> <!--<![endif]-->
-<head>
+<head>	
 	<title><?php if ( is_category() ) {
 		echo __('Category Archive for &quot;', 'theme1692'); single_cat_title(); echo __('&quot; | ', 'theme1692'); bloginfo( 'name' );
 	} elseif ( is_tag() ) {
@@ -206,7 +206,13 @@
 					<?php } ?>
 					<a href="<?php if ( of_get_option('feed_url') != '' ) { echo of_get_option('feed_url'); } else bloginfo('rss2_url'); ?>" rel="nofollow" title="<?php _e('Entries RSS', 'theme1692'); ?>"><?php _e('Entries RSS', 'theme1692'); ?></a><a href="<?php bloginfo('comments_rss2_url'); ?>" rel="nofollow"><?php _e('Comments RSS', 'theme1692'); ?></a><a href="http://wordpress.org">WordPress.org</a>
 				</div>
+				
 				<div class="clear"></div>
+				<iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_permalink($post->ID)); ?>&amp;layout=standard&amp;show_faces=false&amp;
+				2
+				width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:60px; margin-top: 30px;">
+				3
+				</iframe>
 				<div id="widget-header">
 					<?php if ( ! dynamic_sidebar( 'Header' ) ) : ?><!-- Wigitized Header --><?php endif ?>
 				</div><!--#widget-header-->

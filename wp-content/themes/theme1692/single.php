@@ -40,9 +40,14 @@
         <?php } ?>
         <div class="post-content">
           <?php the_content(); ?>
+		<iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_permalink($post->ID)); ?>&amp;layout=standard&amp;show_faces=false&amp;
+		2
+		width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:60px;">
+		3
+		</iframe>
 		  <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
           <?php wp_link_pages('before=<div class="pagination">&after=</div>'); ?>
-        </div><!--.post-content-->
+        </div><!--.post-content-->		
       </article>
     </div><!-- #post-## -->
     
